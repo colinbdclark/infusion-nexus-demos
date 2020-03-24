@@ -8,22 +8,22 @@
         "url": "https://github.com/fluid-project/infusion-nexus-demos.git"
     },
     "dependencies": {
-        "commander": "2.9.0",
-        "flocking": "colinbdclark/flocking",
-        "grunt": "0.4.5",
-        "grunt-contrib-jshint": "1.0.0",
-        "grunt-jsonlint": "1.0.7",
-        "infusion": "3.0.0-dev.20170727T201856Z.8c48d077a",
-        "infusion-nexus-client": "fluid-project/infusion-nexus-client#f330691bb1603160e5139bb6fb783634174fea6f",
-        "nexus-science-lab-synths": "waharnum/nexus-science-lab-synths",
-        "node-static": "0.7.10",
-        "p5": "0.4.24",
-        "qwerty-hancock": "0.5.1",
-        "sensorapijs": "simonbates/p4a-sensorAPI",
-        "chartAuthoring": "waharnum/chartAuthoring#GPII-2358"
+        "commander": "5.0.0",
+        "flocking": "2.0.1",
+        "grunt": "1.1.0",
+        "grunt-contrib-jshint": "2.1.0",
+        "grunt-jsonlint": "2.1.2",
+        "infusion": "3.0.0-dev.20200213T130945Z.c3c22dc4c",
+        "nexus-science-lab-synths": "1.0.0",
+        "node-static": "0.7.11",
+        "p5": "1.0.0",
+        "qwerty-hancock": "0.6.0",
+        "infusion-nexus-client": "fluid-project/infusion-nexus-client",
+        "sensorapijs": "fluid-project/p4a-sensorAPI#1b2eb1f071c0625aba37554cfd575cd17d9dece2",
+        "chartAuthoring": "colinbdclark/chartAuthoring#0e05ee904b4d1055910f7c694672f434fcc06a82"
     },
     "optionalDependencies": {
-        "nodeimu": "2.1.9",
-        "serialport": "4.0.7"
+        "nodeimu": "2.1.12",
+        "serialport": "8.0.7"
     }
 }
