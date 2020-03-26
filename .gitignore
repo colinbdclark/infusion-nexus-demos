@@ -11,3 +11,6 @@ RTIMULib.ini
 
 # package lock file
 package-lock.json
+
+# VSCode configuration
+.vscode/
