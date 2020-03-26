@@ -1,7 +1,6 @@
 "use strict";
 
 var fluid = require("infusion");
-var gpii = fluid.registerNamespace("gpii");
 
 require("infusion-nexus-client");
 
@@ -22,12 +21,12 @@ var joystickQuantizeSteps = 16; // Number of notes = joystickQuantizeSteps / 2 (
 
 fluid.promise.sequence([
     function () {
-        return gpii.constructNexusPeer(nexusHost, nexusPort, "nexus", {
+        return fluid.constructNexusPeer(nexusHost, nexusPort, "nexus", {
             type: "fluid.modelComponent"
         });
     },
     function () {
-        return gpii.constructNexusPeer(nexusHost, nexusPort, "nexus.asterics", {
+        return fluid.constructNexusPeer(nexusHost, nexusPort, "nexus.asterics", {
             type: "fluid.modelComponent",
             model: {
                 connector: {
@@ -73,12 +72,12 @@ fluid.promise.sequence([
         });
     },
     function () {
-        return gpii.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang", {
+        return fluid.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang", {
             type: "fluid.modelComponent"
         });
     },
     function () {
-        return gpii.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang.control", {
+        return fluid.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang.control", {
             type: "fluid.modelComponent",
             model: {
                 activeNote: -1
@@ -86,7 +85,7 @@ fluid.promise.sequence([
         });
     },
     function () {
-        return gpii.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang.zoneController", {
+        return fluid.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang.zoneController", {
             type: "fluid.modelComponent",
             model: {
                 activeZoneIdx: -1
@@ -94,7 +93,7 @@ fluid.promise.sequence([
         });
     },
     function () {
-        return gpii.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang.pianoController", {
+        return fluid.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang.pianoController", {
             type: "fluid.modelComponent",
             model: {
                 activeNote: -1
@@ -102,7 +101,7 @@ fluid.promise.sequence([
         });
     },
     function () {
-        return gpii.constructNexusPeer(nexusHost, nexusPort, "nexus.sensors", {
+        return fluid.constructNexusPeer(nexusHost, nexusPort, "nexus.sensors", {
             type: "fluid.modelComponent",
             model: {
                 orientation: { }
@@ -117,7 +116,7 @@ fluid.promise.sequence([
         });
     },
     function () {
-        return gpii.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang.synth", {
+        return fluid.constructNexusPeer(nexusHost, nexusPort, "nexus.bonang.synth", {
             type: "fluid.modelComponent",
             modelRelay: [
                 {
@@ -225,7 +224,7 @@ fluid.promise.sequence([
         });
     },
     function () {
-        return gpii.constructNexusPeer(nexusHost, nexusPort, "nexus.brailleDisplay", {
+        return fluid.constructNexusPeer(nexusHost, nexusPort, "nexus.brailleDisplay", {
             type: "fluid.modelComponent",
             model: {
                 displayText: ""

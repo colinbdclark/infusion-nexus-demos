@@ -2,7 +2,7 @@
     "use strict";
 
     fluid.defaults("fluid.nexusZoneController", {
-        gradeNames: ["gpii.nexusWebSocketBoundComponent", "fluid.viewComponent"],
+        gradeNames: ["fluid.nexusWebSocketBoundComponent", "fluid.viewComponent"],
         members: {
             nexusPeerComponentPath: "nexus.bonang.zoneController",
             nexusBoundModelPath: "activeZoneIdx",

@@ -111,7 +111,7 @@
     });
 
     fluid.defaults("fluid.nexusPianoController", {
-        gradeNames: ["gpii.nexusWebSocketBoundComponent", "flock.ui.modelKeyboard"],
+        gradeNames: ["fluid.nexusWebSocketBoundComponent", "flock.ui.modelKeyboard"],
 
         highlightKeys: [
             "C6",

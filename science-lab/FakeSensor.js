@@ -8,7 +8,7 @@ var nexusHost = "localhost";
 var nexusPort = 9081;
 
 fluid.defaults("fluid.nexus.fakeSensor", {
-    gradeNames: ["gpii.nexusWebSocketBoundComponent"],
+    gradeNames: ["fluid.nexusWebSocketBoundComponent"],
     model: {
         fakeSensorConfig: {
             updateDelayMs: 1000

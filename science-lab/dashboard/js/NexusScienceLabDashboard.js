@@ -4,7 +4,7 @@
     // TODO: Add ARIA live region markup?
 
     fluid.defaults("fluid.nexusScienceLabDashboard", {
-        gradeNames: ["gpii.nexusWebSocketBoundComponent", "fluid.viewComponent"],
+        gradeNames: ["fluid.nexusWebSocketBoundComponent", "fluid.viewComponent"],
         numberLocale: "en",
         maximumFractionDigits: 2,
         members: {

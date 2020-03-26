@@ -2,7 +2,7 @@
     "use strict";
 
     fluid.defaults("fluid.nexusBonangSynth", {
-        gradeNames: "gpii.nexusWebSocketBoundComponent",
+        gradeNames: "fluid.nexusWebSocketBoundComponent",
         members: {
             nexusPeerComponentPath: "nexus.bonang.synth",
             nexusBoundModelPath: "controls",
