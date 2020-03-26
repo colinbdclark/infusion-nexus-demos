@@ -147,7 +147,7 @@
 
     fluid.nexusPianoController.highlightKeys = function (container, options) {
         fluid.each(options.highlightKeys, function (key) {
-            container.find("[id=" + key + "]").addClass(options.styles.highlightedKey);
+            container.find("[id='" + key + "']").addClass(options.styles.highlightedKey);
         });
     };
 }());
