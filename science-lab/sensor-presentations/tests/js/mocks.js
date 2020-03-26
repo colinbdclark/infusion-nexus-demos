@@ -9,14 +9,14 @@
     // appropriate model path intended to be attached via the
     // nexusBoundModelPath member
 
-    fluid.defaults("gpii.nexusWebSocketBoundComponentMock", {
-        gradeNames: ["gpii.nexusWebSocketBoundComponent"],
+    fluid.defaults("fluid.nexusWebSocketBoundComponentMock", {
+        gradeNames: ["fluid.nexusWebSocketBoundComponent"],
         listeners: {
             "onCreate.constructPeer": {
                 funcName: "{that}.events.onPeerConstructed.fire"
             },
             "onPeerConstructed.bindNexusModel": {
-                funcName: "gpii.nexusWebSocketBoundComponentMock.bindModel",
+                funcName: "fluid.nexusWebSocketBoundComponentMock.bindModel",
                 args: [
                     "{that}",
                     "{that}.receivesChangesFromNexus",
@@ -25,7 +25,7 @@
                 ]
             },
             "onWebsocketConnected.registerModelListenerForNexus": {
-                funcName: "gpii.nexusWebSocketBoundComponentMock.registerModelListener",
+                funcName: "fluid.nexusWebSocketBoundComponentMock.registerModelListener",
                 args: [
                     "{that}.sendsChangesToNexus",
                     "{that}.applier",
@@ -37,16 +37,16 @@
     }
 );
 
-gpii.nexusWebSocketBoundComponentMock.bindModel = function () {
+fluid.nexusWebSocketBoundComponentMock.bindModel = function () {
     return;
 };
 
-gpii.nexusWebSocketBoundComponentMock.registerModelListener = function () {
+fluid.nexusWebSocketBoundComponentMock.registerModelListener = function () {
     return;
 };
 
     fluid.defaults("fluid.nexusSensorPresentationPanelMock", {
-        gradeNames: ["fluid.nexusSensorPresentationPanel", "gpii.nexusWebSocketBoundComponentMock", "fluid.viewComponent"],
+        gradeNames: ["fluid.nexusSensorPresentationPanel", "fluid.nexusWebSocketBoundComponentMock", "fluid.viewComponent"],
         // Eases testing, since we don't have to pause to wait for
         // the fade-out animation before testing that the container
         // is removed

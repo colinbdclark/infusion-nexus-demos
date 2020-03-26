@@ -2,7 +2,7 @@
     "use strict";
 
     fluid.defaults("fluid.nexusBonangSynthControl", {
-        gradeNames: ["gpii.nexusWebSocketBoundComponent", "fluid.viewComponent"],
+        gradeNames: ["fluid.nexusWebSocketBoundComponent", "fluid.viewComponent"],
         selectors: {
             noteInput: ".fluidc-bonang-synth-note",
             sendButton: ".fluidc-bonang-synth-send"

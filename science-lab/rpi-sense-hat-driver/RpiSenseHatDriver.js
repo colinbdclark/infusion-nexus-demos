@@ -69,7 +69,7 @@ fluid.defaults("fluid.nexus.rpiSenseHatDriver", {
             }
         },
         tempNexusBinding: {
-            type: "gpii.nexusWebSocketBoundComponent",
+            type: "fluid.nexusWebSocketBoundComponent",
             options: {
                 members: {
                     nexusHost: "{rpiSenseHatDriver}.options.nexusHost",

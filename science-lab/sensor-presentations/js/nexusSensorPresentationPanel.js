@@ -5,7 +5,7 @@
     // An implementing grade needs to supply
     // appropriate dynamic components
     fluid.defaults("fluid.nexusSensorPresentationPanel", {
-        gradeNames: ["gpii.nexusWebSocketBoundComponent", "fluid.viewComponent"],
+        gradeNames: ["fluid.nexusWebSocketBoundComponent", "fluid.viewComponent"],
         events: {
             onSensorAppearance: null,
             onSensorRemoval: null

@@ -176,7 +176,7 @@ fluid.defaults("fluid.nexus.atlasScientificDriver", {
         },
 
         nexusBinding: {
-            type: "gpii.nexusWebSocketBoundComponent",
+            type: "fluid.nexusWebSocketBoundComponent",
             createOnEvent: "{atlasScientificConnection}.events.onDeviceInformation",
             options: {
                 circuitType: "{arguments}.0.deviceType",
