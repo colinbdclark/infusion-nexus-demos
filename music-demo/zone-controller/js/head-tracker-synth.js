@@ -63,6 +63,10 @@
         gradeNames: "fluid.viewComponent",
 
         model: {
+            /* TODO: likely due to Infusion bugs related to model initialization, these expanders do not work as intended
+               both height and width end up set to 0.
+               Since flocking is currently incompatible with the dev release that fixes these issues, the below onCreate
+               listener manually sets the model values.
             height: {
                 expander: {
                     "this": "{that}.container",
@@ -76,6 +80,42 @@
                     method: "width"
                 }
             }
+            */
+           // FIXME: I don't even know why these work
+           // no one is currently generating the actual page bounds, so I'm not sure how the pointer continues to function
+           height: 1,
+           width: 1
         }
+
+        // TODO: this listener should be unnecessary once we move to a post-FLUID-6145 Infusion release
+        // listeners: {
+        //     "onCreate.setRegionBounds": "fluid.trackerSynth.trackingRegion.setRegionBounds({that})"
+        // },
+
+        // Debugging, delete later
+        // modelListeners: {
+        //     height: {
+        //         funcName: "fluid.trackerSynth.trackingRegion.listenToBounds",
+        //         args: "{change}.value"
+        //     }
+        // }
     });
+
+    // TODO: remove
+//     fluid.trackerSynth.trackingRegion.setRegionBounds = function(trackingRegion) {
+//         console.log(trackingRegion.model);
+//         trackingRegion.applier.change("height", trackingRegion.container.height());
+//         trackingRegion.applier.change("width", trackingRegion.container.width());
+//         console.log(trackingRegion.model);
+//     };
+
+    // TODO: remove
+//     fluid.trackerSynth.trackingRegion.listenToBounds = function(height) {
+//         if (height === 0) {
+//             console.log('height set to 0');
+//             // throw new Error('height set to 0');
+//         } else {
+//             console.log('height set to non-zero value');
+//         }
+//     };
 }());
